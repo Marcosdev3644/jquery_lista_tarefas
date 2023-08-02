@@ -4,11 +4,9 @@ $(document).ready(function() {
         e.preventDefault();
 
         const adicionarTarefa = $('#adicionar-tarefa').val();
-        const novaTarefa = $('<li></li>');
-        $(`<li = "${adicionarTarefa}" />`).appendTo(novaTarefa);
-        
+        const novaTarefa = $('<li></li>').text(adicionarTarefa);
 
-        $(novaTarefa).appendTo('ul');
+        $('ul').append(novaTarefa);
         $(novaTarefa).fadeIn();
         $('#adicionar-tarefa').val(' ');
     })
